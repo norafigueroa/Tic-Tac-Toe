@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../imagenes/fondo3.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #f5deb3;
+    font-family: 'MedievalSharp', cursive;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1 {
+    font-size: 3.5rem;
+    color: gold;
+    text-shadow: 2px 2px 6px #000;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+}
+
+
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(3, 120px);
+    grid-template-rows: repeat(3, 120px);
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border: 3px solid gold;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(218, 165, 32, 0.4);
+}
+
+.celda {
+    width: 120px;
+    height: 120px;
+    background: rgba(90, 30, 30, 0.85); 
+    border: 2px solid gold;
+    border-radius: 8px;
+    font-size: 70px;
+    color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.celda:hover {
+    background: rgba(139, 0, 0, 0.9); 
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+}
+
+button {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 1.3rem;
+    padding: 12px 28px;
+    margin: 12px;
+    border: 2px solid gold;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #5a1e1e, #8b0000);
+    color: #f5deb3;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}

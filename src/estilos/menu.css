@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../imagenes/fondo.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #f5deb3;
+    font-family: 'MedievalSharp', cursive;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1 {
+    font-size: 4rem;
+    color: gold;
+    text-shadow: 2px 2px 5px #000;
+    margin-bottom: 20px;
+    letter-spacing: 4px;
+}
+
+
+h2 {
+    font-size: 2rem;
+    color: #b8860b;
+    text-shadow: 1px 1px 3px #000;
+    margin-bottom: 20px;
+}
+
+
+button {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 1.3rem;
+    padding: 12px 28px;
+    margin: 12px;
+    border: 2px solid gold;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #5a1e1e, #8b0000);
+    color: #f5deb3;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+
+
+button:hover {
+    background: linear-gradient(45deg, #2e4d2e, #006400);
+    color: #fff;
+    border-color: #32cd32;
+    transform: scale(1.05);
+}
+
+img {
+    width: 120px;
+    margin: 20px 0;
+    filter: drop-shadow(0 0 8px rgba(218,165,32,0.6));
+}
