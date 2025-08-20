@@ -1,4 +1,4 @@
-const inciar = document.getElementById("iniciar");
+const iniciar = document.getElementById("iniciar");
 const instrucciones = document.getElementById("instrucciones");
 
 instrucciones.addEventListener("click", function () { //Función botón instrucciones

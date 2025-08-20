@@ -4,30 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
+    <link rel="icon" href="../Tic-Tac-Toe/src/imagenes/logo Hogwarts.png"> <!--Logo de página-->
 </head>
 <link rel="stylesheet" href="src/estilos/style1.css">
 
 <body>
-
-    <h1>Tic-Tac-Toe</h1>
-
-     <div class="tablero">
-            <div class="celda"></div>
-            <div class="celda"></div>
-            <div class="celda"></div>
-            <div class="celda"></div>
-            <div class="celda"></div>
-            <div class="celda"></div>
-            <div class="celda"></div>
-            <div class="celda"></div>
-            <div class="celda"></div>
-        </div>
     
-    <button id="botonReiniciar">Reiniciar partida</button><br><br>
-    <h3>Empates</h3>
-    <h3>Victorias</h3>
-    <h3>Derrotas</h3>
-    <button id="botonEstadisticas">Estadisticas</button>
+    <h1>Tic-Tac-Toe</h1>  <!-- Nombre del juego -->
+
+    <h3>Selecciona el tipo de juego:</h3> <!-- Inicio de selección de modo de juego -->
+
+    <select id="tipoJuego">
+        <option id="multijugador" value="">Multijugador</option>
+        <option id="computadora" value="">Contra la Computadora</option>
+    </select>
+
+    <button id="botonConfirmar">Confirmar</button> <!-- Fin de selección de modo de juego -->
+
+    <div id="modalMultijugador"> <!-- Inicio de modal de registro -->
+        
+        <h2>Registrar nombres de los jugadores</h2>
+
+        <label for="">Jugador 1:</label>
+        <input id="nombreJugador1" type="text" value=""><br><br>
+        <label for="">Jugador 2:</label>
+        <input id="nombreJugador2" type="text" value=""><br><br>
+        <button id="botonGuardar">Boton Guardar</button>
+
+    </div> <!-- fin de modal de registro -->
+
+    <div class="tablero"> <!-- Inicio de tablero -->
+        <div class="celda"></div>
+        <div class="celda"></div>
+        <div class="celda"></div>
+        <div class="celda"></div>
+        <div class="celda"></div>
+        <div class="celda"></div>
+        <div class="celda"></div>
+        <div class="celda"></div>
+         <div class="celda"></div>
+    </div> <!-- Fin de selección de modo de juego -->
+    
+    <button id="botonReiniciar">Reiniciar partida</button><br> <!-- Modo 1 -->
+  
+    <button id="botonEstadisticas">Estadisticas</button> <!-- Modo 2 -->
 
 
 <script src="src/js/proyecto1.js"></script>

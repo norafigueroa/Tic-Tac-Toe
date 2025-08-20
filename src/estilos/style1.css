@@ -15,15 +15,35 @@ body {
     align-items: center;
 }
 
+#modalMultijugador {
+    display: none;
+}
 
 h1 {
-    font-size: 3.5rem;
+    font-size: 70px;
     color: gold;
     text-shadow: 2px 2px 6px #000;
     margin-bottom: 40px;
     letter-spacing: 3px;
 }
 
+h3 {
+    font-size: 30px;
+}
+
+#tipoJuego, #multijugador, #computadora {
+    font-family: 'MedievalSharp', cursive;
+    font-size: 20px;
+    padding: 12px 28px;
+    margin: 12px;
+    border: 2px solid gold;
+    border-radius: 8px;
+    background: linear-gradient(45deg, #5a1e1e, #8b0000);
+    color: #f5deb3;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
 
 .tablero {
     display: grid;
