@@ -19,6 +19,21 @@ body {
     display: none;
 }
 
+#modalComputadora {
+    display: none;
+}
+
+#aclaracion {
+    font-size: 20px;
+    color: gold;
+}
+
+
+p {
+    font-size: 40px;
+    color: gold;
+}
+
 h1 {
     font-size: 70px;
     color: gold;
