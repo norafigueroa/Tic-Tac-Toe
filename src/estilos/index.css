@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
-#modal {
-  display: none;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -17,8 +13,20 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    animation: fadeIn 1s ease-in-out;
+    padding-bottom: 80px;
 }
 
+
+#modal {
+    display: none;
+}
+
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 
 h1 {
     font-size: 4rem;
@@ -26,8 +34,13 @@ h1 {
     text-shadow: 2px 2px 5px #000;
     margin-bottom: 20px;
     letter-spacing: 4px;
+    animation: titleBounce 1s infinite alternate;
 }
 
+@keyframes titleBounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
+}
 
 h2 {
     font-size: 2rem;
@@ -35,7 +48,6 @@ h2 {
     text-shadow: 1px 1px 3px #000;
     margin-bottom: 20px;
 }
-
 
 button {
     font-family: 'MedievalSharp', cursive;
@@ -51,16 +63,40 @@ button {
     transition: all 0.3s ease-in-out;
 }
 
-
 button:hover {
     background: linear-gradient(45deg, #2e4d2e, #006400);
     color: #fff;
     border-color: #32cd32;
-    transform: scale(1.05);
+    transform: scale(1.05) rotate(-2deg);
 }
 
 img {
     width: 120px;
     margin: 20px 0;
     filter: drop-shadow(0 0 8px rgba(218,165,32,0.6));
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+#footerJuego {
+    position: fixed;    
+    bottom: 0;         
+    left: 0;
+    width: 100%;           
+    background-color: #1a1a1a;
+    color: #f0e68c;
+    padding: 20px;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    border-top: 2px solid #f0e68c;
+    text-align: center;
+    z-index: 1000;        
+}
+
+
+#footerJuego p {
+    margin: 5px 0;
 }

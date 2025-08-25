@@ -12,14 +12,11 @@
 
     <h1>Tic-Tac-Toe</h1>  <!-- Nombre del juego -->
 
-    <h3>Selecciona el tipo de juego:</h3> <!-- Inicio de selección de modo de juego -->
-
     <select id="tipoJuego">
+        <option value="" disabled selected>Seleccione el tipo de juego</option>
         <option id="multijugador" value="multijugador">Multijugador</option>
         <option id="computadora" value="computadora">Contra la Computadora</option>
-    </select>
-
-    <button id="botonConfirmar">Confirmar</button> <!-- Fin de selección de modo de juego -->
+    </select> <!-- Fin de selección de modo de juego -->
 
     <div id="modalComputadora"> <!-- Inicio de modal de registro, oculto con css -->
         
@@ -48,9 +45,11 @@
 
     <p id="turno"></p>
     
-    <button id="botonReiniciar">Reiniciar partida</button><br> <!-- Modo 1 -->
+    <button id="botonReiniciar">Reiniciar partida</button><br> 
+
+    <button id="botonNuevoJuego">Iniciar Nuevo Juego</button> 
   
-    <button id="botonEstadisticas">Estadisticas</button> <!-- Modo 2 -->
+    <button id="botonEstadisticas">Estadisticas</button> 
 
 <script src="src/js/computadora.js"></script>
 </body>

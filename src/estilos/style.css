@@ -3,23 +3,25 @@
 body {
     margin: 0;
     padding: 0;
-    background: url("../imagenes/fondo3.jpg") no-repeat center center fixed;
-    background-size: cover;
+    background: url("../imagenes/1.jpg") center center fixed;
     color: #f5deb3;
     font-family: 'MedievalSharp', cursive;
     text-align: center;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-top: 20px;
+    animation: fadeIn 1s ease-in-out;
 }
 
-#modalMultijugador {
-    display: none;
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 
-#modalComputadora {
+#modalMultijugador, #modalComputadora, #botonNuevoJuego, #mostrarEstadisticas  {
     display: none;
 }
 
@@ -28,10 +30,10 @@ body {
     color: gold;
 }
 
-
 p {
-    font-size: 40px;
-    color: gold;
+    font-size: 30px;
+    color:#f5deb3;
+    text-shadow: 1px 1px 3px #000;
 }
 
 h1 {
@@ -40,10 +42,25 @@ h1 {
     text-shadow: 2px 2px 6px #000;
     margin-bottom: 40px;
     letter-spacing: 3px;
+    animation: titleBounce 1s infinite alternate;
+}
+
+@keyframes titleBounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-5px); }
 }
 
 h3 {
     font-size: 30px;
+}
+
+#mostrarEstadisticas{
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border: 3px solid gold;
+    border-radius: 15px;
+    box-shadow: 0 0 35px rgba(218, 165, 32, 0.5);
+    transition: all 0.3s ease-in-out;;
 }
 
 #tipoJuego, #multijugador, #computadora {
@@ -60,6 +77,11 @@ h3 {
     transition: all 0.3s ease-in-out;
 }
 
+#tipoJuego:hover {
+    transform: scale(1.05);
+    border-color: #32cd32;
+}
+
 .tablero {
     display: grid;
     grid-template-columns: repeat(3, 120px);
@@ -69,7 +91,8 @@ h3 {
     padding: 15px;
     border: 3px solid gold;
     border-radius: 15px;
-    box-shadow: 0 0 25px rgba(218, 165, 32, 0.4);
+    box-shadow: 0 0 35px rgba(218, 165, 32, 0.5);
+    transition: all 0.3s ease-in-out;
 }
 
 .celda {
@@ -89,8 +112,8 @@ h3 {
 
 .celda:hover {
     background: rgba(139, 0, 0, 0.9); 
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
 }
 
 button {
@@ -105,4 +128,24 @@ button {
     cursor: pointer;
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    border-color: #32cd32;
+    background: linear-gradient(45deg, #2e4d2e, #006400);
+}
+
+#footerJuego {
+    text-align: center;
+    background-color: #1a1a1a;
+    color: #f0e68c;
+    padding: 20px;
+    font-family: 'Georgia', serif;
+    font-size: 16px;
+    border-top: 2px solid #f0e68c;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
